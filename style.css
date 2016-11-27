@@ -15,6 +15,23 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 
 	html{
-		font-family: "Arial Black", Gadget, sans-serif;
+		background-color: #bfd7ff;
+		font-family: font-family: Verdana, Arial, Helvetica, sans-serif;
+		line-height: 1.25em;
+	}
 	
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 80%;
+    margin: 1 em;
+    padding:0;
+  }
+  
+  h1{
+	text-align:center;
 	
+  }
+
+
