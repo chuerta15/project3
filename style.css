@@ -1,4 +1,4 @@
-* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -16,10 +16,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 	html{
 		background-color: #bfd7ff;
-		font-family: font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
 		line-height: 1.25em;
 	}
-	
+
   #map {
     height: 100%;
   }
@@ -28,10 +28,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     margin: 1 em;
     padding:0;
   }
-  
+
   h1{
 	text-align:center;
-	
+
   }
 
 
