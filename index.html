@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-	<link rel = "stylesheet" type= "text/css" href = "style.css">
+<head>
+  <title>Simple Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel = "stylesheet" type= "text/css" href = "style.css">
 
-  </head>
-  <body>
+</head>
+<body>
 	<header>
 		<h1> Welcome to Our Maps </h1>
 	</header>
 
-    <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 41.881832, lng: -87.623177},
-          zoom: 10
-        });
-      }
-	  </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC142DajwsHSKqox4-d7k8KB08YqLAcaVI&callback=initMap"
-    async defer></script>
+  <div id="map"></div>
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 41.881832, lng: -87.623177},
+        zoom: 10
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBscMaTy7jt6fISLrMwGIejOy-1i-BqJ_g&callback=initMap"
+  async defer></script>
+
+  <p id="test">Position: </p>
 
 
-	<header>
-		<h3>Need a location that you need to go to?</h3>
-	</header>
-			<p>In this project we are using Google Maps API to serve you as a navigation.
-			Our website is designed to make it fast and easy to find your way around town.
-			Chicago has many restaurants, parks, and activies to do.
-			So go out there with confindence that our navigation system will take you there.
-			</p>
-	<footer>
-		<p>Designed by Consuelo and Richard</p>
-	</footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="site.js"></script>
-  </body>
+  <header>
+    <h3>Need a location that you need to go to?</h3>
+  </header>
+  <p>In this project we are using Google Maps API to serve you as a navigation.
+   Our website is designed to make it fast and easy to find your way around town.
+   Chicago has many restaurants, parks, and activies to do.
+   So go out there with confindence that our navigation system will take you there.
+ </p>
+ <article id="controls">
+  <form id="zip-form" name="zip-form" method="get" action="#null">
+    <label for="zip-code">Enter Zip Code: </label>
+    <input type="text" id="zip-code" name="zip-code" />
+    <input type="submit" id="zip-submit" name="zip-submit" value="Send Zip" />
+  </form>
+</article>
+<footer>
+  <p id="ftr">Designed by Consuelo and Richard</p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="site.js"></script>
+</body>
 </html>
