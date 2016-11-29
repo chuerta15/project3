@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="nojs">
+
 <head>
   <title>Simple Map</title>
   <meta name="viewport" content="initial-scale=1.0">
@@ -8,6 +9,7 @@
 
 </head>
 <body>
+
 	<header>
 		<h1> Welcome to Our Maps </h1>
 	</header>
@@ -25,17 +27,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBscMaTy7jt6fISLrMwGIejOy-1i-BqJ_g&callback=initMap"
   async defer></script>
 
-  <p id="test">Position: </p>
-
-
-  <header>
-    <h3>Need a location that you need to go to?</h3>
-  </header>
-  <p>In this project we are using Google Maps API to serve you as a navigation.
-   Our website is designed to make it fast and easy to find your way around town.
-   Chicago has many restaurants, parks, and activies to do.
-   So go out there with confindence that our navigation system will take you there.
- </p>
+ 
  <article id="controls">
   <form id="zip-form" name="zip-form" method="get" action="#null">
     <label for="zip-code">Enter Zip Code: </label>
@@ -43,6 +35,16 @@
     <input type="submit" id="zip-submit" name="zip-submit" value="Send Zip" />
   </form>
 </article>
+
+	<p id="test">Position: </p>
+
+<header>
+    <h3>Want to know your precise location?</h3>
+  </header>
+  <p>In this project we are using Google Maps API in order to find the exact langitude and longitude 
+  of a given zip-code. 
+ </p>
+
 <footer>
   <p id="ftr">Designed by Consuelo and Richard</p>
 </footer>
