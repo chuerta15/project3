@@ -14,11 +14,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 */
 
 
-	html{
-		background-color: #bfd7ff;
-		font-family: Verdana, Arial, Helvetica, sans-serif;
-		line-height: 1.25em;
-	}
+  html{
+    background-color: #bfd7ff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 1.25em;
+  }
 
   #map {
     height: 100%;
@@ -30,7 +30,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   }
 
   h1{
-	text-align:center;
+    text-align:center;
 
   }
 
