@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="nojs">
+<html lang="en">
 
 <head>
   <title>Simple Map</title>
@@ -10,45 +10,40 @@
 </head>
 <body>
 
-	<header>
-		<h1> Welcome to Our Maps </h1>
-	</header>
+  <header>
+    <h1> Welcome to Our Maps </h1>
+  </header>
 
+  <h3>Your Google Map</h3>
   <div id="map"></div>
-  <script>
-    var map;
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 41.881832, lng: -87.623177},
-        zoom: 10
-      });
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBscMaTy7jt6fISLrMwGIejOy-1i-BqJ_g&callback=initMap"
-  async defer></script>
 
 
- <article id="controls">
-  <form id="zip-form" name="zip-form" method="get" action="#null">
-    <label for="zip-code">Enter Zip Code: </label>
-    <input type="text" id="zip-code" name="zip-code" />
-    <input type="submit" id="zip-submit" name="zip-submit" value="Send Zip" />
-  </form>
-</article>
+  <article id="controls">
+    <form id="zip-form" name="zip-form" method="get" action="#null">
+      <label for="zip-code">Enter Zip Code: </label>
+      <input type="text" id="zip-code" name="zip-code" />
+      <input type="submit" id="zip-submit" name="zip-submit" value="Send Zip" />
+    </form>
+  </article>
 
-	<p id="test">Position: </p>
+  <p id="test">Position: </p>
 
-<header>
+  <header>
     <h3>Want to know your precise location?</h3>
   </header>
   <p>In this project we are using Google Maps API in order to find the exact longitude and latitude
-  of a given zip-code.
- </p>
+    of a given zip-code.
+  </p>
 
-<footer>
-  <p id="ftr">Designed by Consuelo and Richard</p>
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="site.js"></script>
-</body>
-</html>
+  <footer>
+    <p id="ftr">Designed by Consuelo and Richard</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz2_Ve_tK4VvHl-F0nD1oKACoQdiw_MZA" async defer></script>
+  <script src="gmaps.js"></script>
+  <script src="site.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz2_Ve_tK4VvHl-F0nD1oKACoQdiw_MZA&callback=initGmaps" async defer</script> -->
+    <!-- <script src="site2.js"></script> -->
+
+  </body>
+  </html>
