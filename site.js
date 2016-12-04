@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
   var initLat = 41.8403395;
-  var initLong = -87.627092;
+  var initLong = -87.627072;
   var map = new GMaps({
     el: '#map',
     lat: initLat,
@@ -21,7 +21,7 @@ $('#zip-form').on('submit', function(event) {
   var query = $('#zip-code').val();
     $('#test').append(query);
     $.get(
-      'https://maps.googleapis.com/maps/api/geocode/json?address=' + query + '&key=AIzaSyAz2_Ve_tK4VvHl-F0nD1oKACoQdiw_MZA',
+      'https://maps.googleapis.com/maps/api/geocode/json?address=' + query + '&key=AIzaSyBscMaTy7jt6fISLrMwGIejOy-1i-BqJ_g',
       function(data) {
         $('#test').append(data.results[0]);
         var longitude = data.results[0].geometry.location.lng;
@@ -41,9 +41,6 @@ $('#zip-form').on('submit', function(event) {
           }
         })
       });
-
-
-
     event.preventDefault();
   });
 
