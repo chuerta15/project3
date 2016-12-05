@@ -19,14 +19,16 @@ $(document).ready(function() {
 
 $('#zip-form').on('submit', function(event) {
   var query = $('#zip-code').val();
-    $('#test').append(query);
+    console.log(query);
+    $('#zip').empty();
+    $('#zip').append(query);
     $.get(
       'https://maps.googleapis.com/maps/api/geocode/json?address=' + query + '&key=AIzaSyBscMaTy7jt6fISLrMwGIejOy-1i-BqJ_g',
       function(data) {
-        $('#test').append(data.results[0]);
+        // $('#zip').append('Position: ' + data.results[0]);
         var longitude = data.results[0].geometry.location.lng;
         var latitude = data.results[0].geometry.location.lat;
-        $('#test').append(' Longitude: ' + longitude + ', Latitude: ' + latitude);
+        $('#zip').append(': Longitude: ' + longitude + ', Latitude: ' + latitude);
         map = new GMaps({
           el: '#map',
           lat: latitude,
