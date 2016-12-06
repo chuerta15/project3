@@ -82,9 +82,9 @@ $(document).ready(function() {
     // var md5 = MD5(secret+key);  //needed only for some queries
 
     // get authorization token
-    var url = 'http://api.petfinder.com/';
+    var url = 'https://api.petfinder.com/';
     var searchItem = 'shelter.find'
-    var apiString = 'http://api.petfinder.com/shelter.find?format=json&key=' + key  +
+    var apiString = 'https://api.petfinder.com/shelter.find?format=json&key=' + key  +
     '&location=' + zip + '&callback=?';
 
     // var status;
