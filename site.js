@@ -49,7 +49,7 @@ $(document).ready(function() {
         var latitude = data.results[0].geometry.location.lat;
         var city = data.results[0].address_components[1].short_name;
         // console.log(city);
-        $('#zip').append(': Longitude: ' + longitude + ', Latitude: ' + latitude);
+        $('#zip').append(': Longitude: ' + longitude + ', Latitude: ' + latitude + '.  City: ' + city);
         map = new GMaps({
           el: '#map',
           lat: latitude,
