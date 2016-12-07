@@ -96,7 +96,7 @@ $(document).ready(function() {
     function accessData ()  {
       var key = 'ca77abb4e1f8c1cb6d536dfcdf9f45da';
       var secret = '68426d0a9aa189d3d8fddb057a27b23d';
-    // var md5 = MD5(secret+key);  //needed only for some queries
+    // var md5 = MD5(secret+key);  //needed only for some queries leaving this here for now as I will need it for other queries
 
     // get authorization token
     var url = 'https://api.petfinder.com/';
@@ -111,6 +111,11 @@ $(document).ready(function() {
     $.ajax({
       url: apiString,
       dataType: 'jsonp',
+      error: function (error) {
+        console.log(error);
+        var str = ' A data access error occurred.  Please try again later';
+        $('#error').append(str.fontcolor("red"));
+      },
       success: function(data){
 
       var shelters = data.petfinder.shelters.shelter;
@@ -127,8 +132,6 @@ $(document).ready(function() {
           }
         })
 
-
-
         var shelter = new Object();
         shelter.name = shelters[i].name.$t;
         shelter.city = shelters[i].city.$t;
@@ -137,7 +140,7 @@ $(document).ready(function() {
         shelter.zip = shelters[i].zip.$t;
         shelter.phone = shelters[i].phone.$t;
         localShelters.push(shelter).$t;
-        console.log(shelter.latitude.$t, shelter.longitude.$t);
+        // console.log(shelter.latitude.$t, shelter.longitude.$t);
         };
       }
     })
