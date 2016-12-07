@@ -3,6 +3,7 @@
 $(document).ready(function() {
   var initLat = 41.8403395;
   var initLong = -87.627072;
+  // var pinImage = new google.maps.MarkerImage("http://www.googlemapsmarkers.com/v1/009900/");
   var map = new GMaps({
     el: '#map',
     lat: initLat,
@@ -11,9 +12,10 @@ $(document).ready(function() {
   map.addMarker({
     lat: initLat,
     lng: initLong,
-    title: 'your place',
+    title: '60616',
+    icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
     click: function(e) {
-      alert('you clicked');
+      alert('60616');
     }
   });
 
@@ -46,19 +48,22 @@ $(document).ready(function() {
         var longitude = data.results[0].geometry.location.lng;
         var latitude = data.results[0].geometry.location.lat;
         var city = data.results[0].address_components[1].short_name;
-        console.log(city);
+        // console.log(city);
         $('#zip').append(': Longitude: ' + longitude + ', Latitude: ' + latitude);
         map = new GMaps({
           el: '#map',
           lat: latitude,
           lng: longitude,
         });
+        var cityName = {"city": city};
+        // console.log(cityName);
         map.addMarker({
           lat: latitude,
           lng: longitude,
-          title: 'your spot',
+          title: city,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
           click: function(e) {
-            alert('you clicked');
+            alert('You clicked');
           }
         });
         addMarkers(map, query);
@@ -127,6 +132,7 @@ $(document).ready(function() {
           lat: shelters[i].latitude.$t,
           lng: shelters[i].longitude.$t,
           title: shelters[i].name.$t,
+          icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
           click: function(e) {
             alert('you clicked');
           }
