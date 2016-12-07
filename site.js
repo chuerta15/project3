@@ -27,9 +27,26 @@ $(document).ready(function() {
         '&key=AIzaSyBscMaTy7jt6fISLrMwGIejOy-1i-BqJ_g',
       function(data) {
         // load the initial zip code
+        var status = data.status;
+        switch(status) {
+          case "OK":
+            console.log("Successful query");
+            break;
+          case "ZERO_RESULTS":
+            console.log("Zip code not found");
+            var str = (' Sorry, I could not find that zip code').fontcolor("red");
+            $('#zip').append(str);
+            break;
+          default:
+            console.log('default');
+            $('#zip').append(' Sorry, something really weird happened.  We will be investigating this soon');
+            break;
+        }
+        console.log(status);
         var longitude = data.results[0].geometry.location.lng;
         var latitude = data.results[0].geometry.location.lat;
-        console.log(latitude);
+        var city = data.results[0].address_components[1].short_name;
+        console.log(city);
         $('#zip').append(': Longitude: ' + longitude + ', Latitude: ' + latitude);
         map = new GMaps({
           el: '#map',
