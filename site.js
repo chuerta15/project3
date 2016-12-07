@@ -55,7 +55,7 @@ $(document).ready(function() {
           lat: latitude,
           lng: longitude,
         });
-        var cityName = {"city": city};
+        // var cityName = {"city": city};
         // console.log(cityName);
         map.addMarker({
           lat: latitude,
